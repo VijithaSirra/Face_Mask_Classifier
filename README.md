@@ -13,15 +13,12 @@ By this we can get labels easily while training, And no need to create another c
 
 Coming to Tensorflow, I used normal network architecture to train 5000 and test 1000 images with (64,64,3) size for faster training. we can use same (224,224,3) size if we have GPU based system.
 
-We used BatchNormalization to rescaling, reshifting and train our model faster and used DropOut layer to Regularisation.   
+I used BatchNormalization to rescaling, reshifting and train our model faster and used DropOut layer to Regularise the dataset.   
 
+I Used ReLu Activation Function after BatchNormalization layer. To Calculate Cross entropy I used Sigmoid Cross Entropy and Adam for Optimising. I Trained 6000 image dataset in 10 epochs with 20 batch size. In Average it is processed in 75 sec for one epoch and got 100% accuracy for both train and test.
 
-
-
-We Used 5000 Images For Training and 1000 Images for Testing.
-
-We used Batch Normalisation and Dropout Layers in TensorFlow. And Used ResNet Network Architecture to train our model in keras.
-
+Coming to ResNet, This is a 50 layer Network Architecture with MaxPooling , AveragePooling , BacthNormalisation, ReLu Activation Function and final layer with Softmax. To Calculate Cross Entropy I Used Sparse Categorical Crossentropy and Adam for Optimising. I Trained 6000 image dataset in 10 epochs with 60 batch size.
+In Average it is processed in 870 sec for one epoch and got 100% accuracy for both train and test.
 
 
 ### DataSet Source :
